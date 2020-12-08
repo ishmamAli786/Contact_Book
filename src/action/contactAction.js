@@ -1,4 +1,4 @@
-import { CREATE_CONTACT,GET_CONTACT,UPDATE_CONTACT} from '../constant/types';
+import { CREATE_CONTACT,GET_CONTACT,UPDATE_CONTACT,DeleteContact} from '../constant/types';
 
 /// actions
 export const addContact = (contact) => ({
@@ -21,4 +21,12 @@ export const updateContact = (contact) => ({
     type: UPDATE_CONTACT,
     payload: contact
 })
+
+
+/// delete a contact
+export const deleteContact = (payload) => ({
+    type: DeleteContact,
+    payload: id,
+})
+
 

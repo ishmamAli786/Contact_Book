@@ -6,8 +6,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {deleteContact} from '../../action/contactAction';
+import {useDispatch} from 'react-redux';
 
 const Contacts = ({contact}) => {
+    const dispatch =useDispatch();
     const {name,phone,email,id}=contact;
     return (
             <tr>
@@ -21,7 +24,7 @@ const Contacts = ({contact}) => {
                 <td>{email}</td>
             <td className="actions">
                 <Link to={`/contacts/edit/${id}`}><span><i class="fas fa-pen"></i></span></Link>
-                <Link to="#"><span><i class="fas ml-2 fa-minus-circle text-danger"></i></span></Link>
+                <span><i class="fas ml-2 fa-minus-circle text-danger" onClick={()=> dispatch(deleteContact(id))}></i></span>
             </td>
             </tr>
     )

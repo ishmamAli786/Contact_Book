@@ -8,3 +8,12 @@ export const UPDATE_CONTACT = (payload) => ({
     type: type,
     payload
 })
+
+
+export  function DeleteContact() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
