@@ -5,6 +5,7 @@ import NavBar from './components/elements/NavBar';
 import {Provider} from 'react-redux';
 import store from './store';
 import {AddContact} from './components/contacts/AddContact';
+import EditContact  from './components/contacts/EditContact';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +24,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Contact}></Route>
                 <Route exact path="/contacts/add" component={AddContact}></Route>
+                <Route exact path="/contacts/edit/:id" component={EditContact}></Route>
             </Switch>
             </div>
           </div>

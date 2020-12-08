@@ -1,8 +1,14 @@
 import React from 'react';
 import Avatar from 'react-avatar';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 const Contacts = ({contact}) => {
-    const {name,phone,email}=contact;
+    const {name,phone,email,id}=contact;
     return (
             <tr>
                 <td>  
@@ -14,8 +20,8 @@ const Contacts = ({contact}) => {
                 <td>{phone}</td>
                 <td>{email}</td>
             <td className="actions">
-            <a href="#"><span><i class="fas fa-pen"></i></span></a>
-                <a href="#"><span><i class="fas ml-2 fa-minus-circle text-danger"></i></span></a>
+                <Link to={`/contacts/edit/${id}`}><span><i class="fas fa-pen"></i></span></Link>
+                <Link to="#"><span><i class="fas ml-2 fa-minus-circle text-danger"></i></span></Link>
             </td>
             </tr>
     )
