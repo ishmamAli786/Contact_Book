@@ -9,14 +9,14 @@ import {
 import {deleteContact} from '../../action/contactAction';
 import {useDispatch} from 'react-redux';
 
-const Contacts = ({contact}) => {
+const Contacts = ({contact,selectAll}) => {
     const dispatch =useDispatch();
     const {name,phone,email,id}=contact;
     return (
             <tr>
                 <td>  
                  <div className="custom-control custom-checkbox">
-                <input type="checkbox" className="custom-control-input"></input>
+                    <input checked={selectAll} type="checkbox" className="custom-control-input"></input>
                 <label className="custom-control-label"></label>
                 </div></td>
                 <td><Avatar name={name} size="45" round={true} className="mr-3"/>{name}</td>

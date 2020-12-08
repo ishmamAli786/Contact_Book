@@ -17,3 +17,7 @@ export  function DeleteContact() {
         </div>
     )
 }
+
+export const SELECT_CONTACT = 'SELECT_CONTACT';
+export const CLEAR_CONTACT = 'CLEAR_CONTACT';
+export const DELETE_SELECTED_CONTACTS = 'DELETE_SELECTED_CONTACTS';
